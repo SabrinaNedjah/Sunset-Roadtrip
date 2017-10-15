@@ -79,7 +79,7 @@ const time = () => {
             star.style.bottom
             .slice(0, -2), 10
           );
-      //make stars less opaque near bottom of view
+      //stars less opaque
       let bias = getPosY / 100
       star.style.opacity = opacity * bias;
     })  

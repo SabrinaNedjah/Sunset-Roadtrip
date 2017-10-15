@@ -1,17 +1,20 @@
-# Sunset-Roadtrip
-Little annimation with css
+# Sunset RoadTrip
+Ride accross the desert with a 4x4.
 
-### Intructions
-- Touch the sky to change it
+### Setup
+```bash
+git clone git@github.com:SabrinaNedjah/Sunset-Roadtrip.git
+```
+
+Then open the `index.html` file in the `/src` folder.
 
 ### Features
+- Day / Night mode (touch the sky to enable/disabled)
+
+### Technologies
 - HTML
 - CSS
 - JAVASCRIPT
-
-### Installation
-- Download the file
-- Open index.html inside 
 
 ### Todo
 - [ ] Stabilize the truck

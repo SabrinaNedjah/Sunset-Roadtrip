@@ -17,5 +17,6 @@ Then open the `index.html` file in the `/src` folder.
 - JAVASCRIPT
 
 ### Todo
-- [ ] Stabilize the truck
+- [x] Stabilize the truck
 - [x] Clean up
+- [ ] Add features (plane, cloud ...)

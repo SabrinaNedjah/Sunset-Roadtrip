@@ -27,7 +27,7 @@ let stopTimer = () => {
   nextMeteor = 6000;
 }
 
-//Let's make some stars
+//stars
 for(let i = 0; i < 512; i++) {
   let posX = random(100);
   let posY = random(100);
@@ -38,10 +38,9 @@ for(let i = 0; i < 512; i++) {
   sky.appendChild(star); 
 }
 
-//Let's keep track of our stars
 let stars = sky.querySelectorAll('.star');
 
-//Let's make a meteor shower
+//meteor shower
 const newMeteor = () => {
   console.log(nextMeteor);
   let posX = random(100);
@@ -99,5 +98,3 @@ sky.addEventListener('click', () => {
 })
 
 window.onload = time;
-
-

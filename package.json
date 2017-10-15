@@ -1,0 +1,28 @@
+{
+  "name": "my_package",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SabrinaNedjah/Sunset-Roadtrip.git"
+  },
+  "keywords": [],
+  "author": "Sabrina Nedjah",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "hover.css": "^2.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

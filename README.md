@@ -1,6 +1,9 @@
 # Sunset-Roadtrip
 Little annimation with css
 
+### Intructions
+- Touch the sky to change it
+
 ### Features
 - HTML
 - CSS

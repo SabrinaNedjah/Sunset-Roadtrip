@@ -1,8 +1,8 @@
 {
-  "name": "my_package",
-  "description": "",
+  "name": "sunset_roadtrip",
+  "description": "projet hetic H2",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,14 +15,5 @@
   "license": "MIT",
   "bugs": {
     "url": ""
-  },
-  "homepage": "",
-  "dependencies": {
-    "hover.css": "^2.2.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
   }
 }

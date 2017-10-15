@@ -1,20 +1,32 @@
-const sky = document.querySelector('#sky');
-const sun = document.querySelector('#sun');
-const moon = document.querySelector('#moon');
+// IMPORTANT :
+// WORK WITH MODERN NAVIGATOR (chrome etc...) 
+// const, arrow functions or deconstructed parameters, It's ES6 only.
+// Without Babel, it doesn't work everywhere
+
+
+////////////
+//SETTING //
+///////////
+
+const sky = document.querySelector('.sky');
+const sun = document.querySelector('.sun');
+const moon = document.querySelector('.moon');
 
 const activate = (...elems) => 
   elems.forEach(elem =>
     elem.classList.add('active'))
+
 const deactivate = (...elems) =>
   elems.forEach(elem =>
     elem.classList.remove('active'))
+
 const random = (scale, shift = 0) =>
   Math.floor(Math.random() * scale + shift)
 
 let nightTime = false;
 let nextMeteor = 0;
-
 let meteorTimer;
+
 let randomTimer = () => {
   newMeteor();
   meteorTimer = setTimeout(() => {
@@ -22,12 +34,16 @@ let randomTimer = () => {
     nextMeteor = random(5000, 1000);
   }, nextMeteor)
 }
+
 let stopTimer = () => {
   clearInterval(meteorTimer);
   nextMeteor = 6000;
 }
 
-//stars
+////////////
+//  STAR  //
+///////////
+
 for(let i = 0; i < 512; i++) {
   let posX = random(100);
   let posY = random(100);
@@ -40,7 +56,11 @@ for(let i = 0; i < 512; i++) {
 
 let stars = sky.querySelectorAll('.star');
 
-//meteor shower
+////////////
+// METEOR //
+// SHOWER //
+///////////
+
 const newMeteor = () => {
   console.log(nextMeteor);
   let posX = random(100);
@@ -49,23 +69,22 @@ const newMeteor = () => {
   let transY = random(15, 15);
   let opacity = Math.random();
   let bias = transY / 100;
-  
-  let meteor = 
-      document.createElement('div');
+  let meteor = document.createElement('div');
+
   meteor.classList.add('meteor');
   meteor.style.left = `${posX}vw`;
   meteor.style.bottom = `${posY}vh`;
-  //meteor.style.opacity = opacity * bias;
+
   meteor.addEventListener('transitionend', () => {
     sky.removeChild(meteor);
   });
+
   sky.appendChild(meteor);
-  
   setTimeout(() => {
     meteor.style.opacity = 0;
     meteor.style.transform =
       `translateX(${transX}vw) translateY(${transY}vh)`;
-  }, 15)   
+  }, 15)  
 }
 
 const time = () => {  
